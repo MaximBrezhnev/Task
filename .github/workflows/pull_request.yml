@@ -31,10 +31,6 @@ jobs:
     - name: Ruff fix
       run: ruff format . && ruff check --fix . && ruff check --fix --select I .
 
-    - name: Ruff check
-      run: |
-        ruff check . && ruff check --select I . && ruff format --check .
-
     - name: Commit ruff fix
       run: | 
         git config user.name "github-actions[bot]"
